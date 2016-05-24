@@ -1,0 +1,23 @@
+{
+  "name": "express-auto-search-router",
+  "version": "0.0.1",
+  "description": "express路由自动寻找",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincentgor/express-auto-search-router.git"
+  },
+  "author": "koala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincentgor/express-auto-search-router/issues"
+  },
+  "homepage": "https://github.com/vincentgor/express-auto-search-router#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "glob": "^7.0.3"
+  }
+}
