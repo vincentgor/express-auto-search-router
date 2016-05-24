@@ -11,18 +11,18 @@ glob("controllers/**/*.js", (err, files) => {
     if (err) {
         console.log(err);
     }
-    var map = {};
+    let map = new Map();
     files.forEach((file, index) => {
 
-        var first = file.indexOf('/');
-        var last = file.lastIndexOf('.');
-        var key = file.substring(first, last);
-        var tmp = key.substring(key.length - 5);
+        let first = file.indexOf('/');
+        let last = file.lastIndexOf('.');
+        let key = file.substring(first, last);
+        let tmp = key.substring(key.length - 5);
         if (tmp === 'index') {
-            key = key.substring(0, key.length - 6);
+            key = key.substring(0, key.length - 5);
         }
-        map[key] = './' + file;
-        router.use(key, require(map[key]));
+        map.set(key, './' + file);
+        router.use(key, require(map.get(key)));
     });
     console.log(map);
 });
